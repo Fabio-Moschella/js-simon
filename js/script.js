@@ -3,7 +3,7 @@
 //############################################################################
 let rimaningTime = 5;
 const countdownManagement = document.getElementById("countdown");
-const numberListEl = document.querySelectorAll("#numbers-list", "li");
+const numberListEl = document.querySelectorAll("#numbers-list li");
 const randomNumbers = Math.floor(Math.random() * 50) + 1;
 
 //############################################################################
