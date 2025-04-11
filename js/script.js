@@ -3,8 +3,7 @@
 //############################################################################
 let rimaningTime = 5;
 const countdownManagement = document.getElementById("countdown");
-const numberListEl = document.querySelectorAll("#numbers-list li");
-const randomNumbers = Math.floor(Math.random() * 50) + 1;
+const numberListEl = document.getElementById("numbers-list");
 
 //############################################################################
 //FUNCTIONS
@@ -25,6 +24,14 @@ const thirtySecondIntervalId = setInterval(() => {
   }
 }, 1000);
 
-numberListEl.forEach((li) => {
-  li.innerHTML += randomNumbers;
-});
+function addListItemNumbers(iterations) {
+  //   let arrayNumber = [];
+  for (let i = 0; i < iterations; i++) {
+    const listItemEl = document.createElement("li");
+    const randomNumbers = Math.floor(Math.random() * 50) + 1;
+    listItemEl.innerHTML = randomNumbers;
+    numberListEl.appendChild(listItemEl);
+  }
+}
+
+addListItemNumbers(5);
