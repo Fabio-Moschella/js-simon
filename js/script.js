@@ -4,7 +4,7 @@
 let rimaningTime = 5;
 const countdownManagement = document.getElementById("countdown");
 const numberListEl = document.getElementById("numbers-list");
-
+const formAnswer = document.getElementById("answers-form");
 //############################################################################
 //FUNCTIONS
 //############################################################################
@@ -21,6 +21,8 @@ const thirtySecondIntervalId = setInterval(() => {
   if (rimaningTime === 0) {
     clearInterval(thirtySecondIntervalId);
     tempoScaduto();
+    numberListEl.classList.add("d-none");
+    formAnswer.classList.replace("d-none", "d-inline-block");
   }
 }, 1000);
 
